@@ -1,0 +1,11 @@
+c:\users\windows 8.1\documents\visual studio 2013\Projects\SinchronizerV2\SinchronizerV2\bin\Debug\SinchronizerV2.exe.config
+c:\users\windows 8.1\documents\visual studio 2013\Projects\SinchronizerV2\SinchronizerV2\bin\Debug\SinchronizerV2.exe
+c:\users\windows 8.1\documents\visual studio 2013\Projects\SinchronizerV2\SinchronizerV2\bin\Debug\SinchronizerV2.pdb
+c:\users\windows 8.1\documents\visual studio 2013\Projects\SinchronizerV2\SinchronizerV2\obj\Debug\SinchronizerV2.csprojResolveAssemblyReference.cache
+c:\users\windows 8.1\documents\visual studio 2013\Projects\SinchronizerV2\SinchronizerV2\obj\Debug\SinchronizerV2.exe
+c:\users\windows 8.1\documents\visual studio 2013\Projects\SinchronizerV2\SinchronizerV2\obj\Debug\SinchronizerV2.pdb
+C:\Users\Windows 8.1\Documents\Visual Studio 2013\Projects\SinchronizerV2\SinchronizerV2\bin\Debug\Sinchronizer.XML
+C:\Users\Windows 8.1\Desktop\SynchronizerV2\SinchronizerV2\SinchronizerV2\bin\Debug\SinchronizerV2.exe.config
+C:\Users\Windows 8.1\Desktop\SynchronizerV2\SinchronizerV2\SinchronizerV2\bin\Debug\Sinchronizer.XML
+C:\Users\Windows 8.1\Desktop\SynchronizerV2\SinchronizerV2\SinchronizerV2\obj\Debug\SinchronizerV2.exe
+C:\Users\Windows 8.1\Desktop\SynchronizerV2\SinchronizerV2\SinchronizerV2\obj\Debug\SinchronizerV2.pdb

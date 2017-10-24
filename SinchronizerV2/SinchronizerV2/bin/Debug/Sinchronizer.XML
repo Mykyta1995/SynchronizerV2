@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SinchronizerV2</name>
+    </assembly>
+    <members>
+        <member name="T:SinchronizerV2.ComparisonFile">
+            <summary>
+            class for executing operations with files
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.ComparisonFile.TestFile(SinchronizerV2.ImportSinchronizaer,SinchronizerV2.ExportSinhronizaer)">
+            <summary>
+            file comparison method
+            </summary>
+            <see cref="!:TestFileExport()"/>
+            <see cref="M:SinchronizerV2.ComparisonFile.CopyFile(System.IO.FileStream,System.String)"/>
+            <see cref="!:export.AddNewFile()"/>
+            <param name="import">parameter for working with the class ImportSinchronizaer</param>
+            <param name="export">parameter for working with the class ExportSinhronizaer</param>
+        </member>
+        <member name="M:SinchronizerV2.ComparisonFile.TestFileExport(SinchronizerV2.ExportSinhronizaer,System.IO.FileStream,System.String,System.String)">
+            <summary>
+            file comparison method
+            </summary>
+            <see cref="M:SinchronizerV2.ComparisonFile.MD5Hash(System.IO.FileStream,System.IO.FileStream)"/>
+            <see cref="!: export.Remove"/>
+            <see cref="M:SinchronizerV2.ComparisonFile.MoveFile(System.String,System.String)"/>
+            <see cref="!: export.AddMoveFile"/>
+            <param name="export">parameter for working with the class ExportSinhronizaer</param>
+            <param name="fileImpor">file for comparison in import</param>
+            <param name="fileIm">the path to the file</param>
+            <param name="Way">file transfer path</param>
+            <returns>the file was moved or not</returns>
+        </member>
+        <member name="M:SinchronizerV2.ComparisonFile.MD5Hash(System.IO.FileStream,System.IO.FileStream)">
+            <summary>
+            file comparison method
+            </summary>
+            <param name="fileImpor">file import</param>
+            <param name="fileExport">file import</param>
+            <returns>same or not</returns>
+        </member>
+        <member name="M:SinchronizerV2.ComparisonFile.MoveFile(System.String,System.String)">
+            <summary>
+            method of displacement files
+            </summary>
+            <param name="fileEx">file import</param>
+            <param name="Way">file transfer path</param>
+        </member>
+        <member name="M:SinchronizerV2.ComparisonFile.CopyFile(System.IO.FileStream,System.String)">
+            <summary>
+            copy method
+            </summary>
+            <param name="importFile">import file</param>
+            <param name="Way">file transfer path</param>
+        </member>
+        <member name="M:SinchronizerV2.ComparisonFile.DeleteFile(System.Collections.Generic.List{System.String})">
+            <summary>
+            method of deleting folders
+            </summary>
+            <param name="files">list of folders</param>
+        </member>
+        <member name="T:SinchronizerV2.OperatinDirectory">
+            <summary>
+            Class for working with folders
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.OperatinDirectory.CrieteDirectory(System.String)">
+            <summary>
+            method of creating a folder
+            </summary>
+            <param name="buf">folder creation path</param>
+        </member>
+        <!-- Некорректный комментарий в формате XML для члена "M:SinchronizerV2.OperatinDirectory.TestDirectory(SinchronizerV2.ImportSinchronizaer,SinchronizerV2.ExportSinhronizaer)" проигнорирован -->
+        <member name="M:SinchronizerV2.OperatinDirectory.DeleteDir(System.Collections.Generic.List{System.String})">
+            <summary>
+            method of deleting folders
+            </summary>
+            <param name="dirs">list of deleted folders</param>
+        </member>
+        <member name="T:SinchronizerV2.ExportSinhronizaer">
+            <summary>
+            folder export class
+            </summary>
+        </member>
+        <member name="T:SinchronizerV2.SinchronizaerBase">
+            <summary>
+            This is the base class ExportSinhronizaer and ImportSinchronizaer
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.SinchronizaerBase.log">
+            <summary>
+            The string collection
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.SinchronizaerBase.size">
+            <summary>
+            menu display field
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.SinchronizaerBase.cursor">
+            <summary>
+            menu display field
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.SinchronizaerBase.WalkRir(System.IO.DirectoryInfo,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},SinchronizerV2.Sinhronizer,System.Int32,System.Boolean)">
+            <summary>
+            recursive traversal method
+            </summary>
+            <param name="root">root directory</param>
+            <param name="file">write files</param>
+            <param name="dir">write directoru</param>
+            <param name="obj">serialization object</param>
+            <param name="count">file counter for serialization</param>
+            <param name="common">flag to continue traversal</param>
+        </member>
+        <member name="M:SinchronizerV2.SinchronizaerBase.Waiting">
+            <summary>
+            menu output method
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.ExportSinhronizaer.files">
+            <summary>
+            list files
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.ExportSinhronizaer.dir">
+            <summary>
+            list dirs
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.ExportSinhronizaer.newDir">
+            <summary>
+            list new dir in root directory
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.ExportSinhronizaer.newFile">
+            <summary>
+            list new file in root directory
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.ExportSinhronizaer.moveFile">
+            <summary>
+            dictionary for move file
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.ExportSinhronizaer.AddNewDir(System.String)">
+            <summary>
+            Method for adding a new folder
+            </summary>
+            <param name="way">The path to the new folder</param>
+        </member>
+        <member name="M:SinchronizerV2.ExportSinhronizaer.AddNewFile(System.String)">
+            <summary>
+            Method for adding a new file
+            </summary>
+            <param name="way">The path to the new file</param>
+        </member>
+        <member name="M:SinchronizerV2.ExportSinhronizaer.AddMoveFile(System.String,System.String)">
+            <summary>
+            Method for adding a move file
+            </summary>
+            <param name="key">new way</param>
+            <param name="value">old way</param>
+        </member>
+        <member name="M:SinchronizerV2.ExportSinhronizaer.Open(SinchronizerV2.Sinhronizer)">
+            <summary>
+            method of starting recursive traversal
+            </summary>
+            <param name="s">root of the bypass folder</param>
+            <param name="obj">serialization object</param>
+        </member>
+        <member name="M:SinchronizerV2.ExportSinhronizaer.Remove(System.String)">
+            <summary>
+            method of deleting a file
+            </summary>
+            <param name="key">deletion key</param>
+        </member>
+        <member name="M:SinchronizerV2.ExportSinhronizaer.Reset">
+            <summary>
+            method of cleaning values
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.ExportSinhronizaer.ClearError">
+            <summary>
+            method for cleaning a folder in case of an error
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ExportSinhronizaer.Complete">
+            <summary>
+            <value>property for checking is ended recursive bypass</value>
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ExportSinhronizaer.StopWaySearch">
+            <summary>
+            <value>the property of stopping a recursive crawl of a folder</value>
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ExportSinhronizaer.Dir">
+            <summary>
+            <value>folder-property</value>
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ExportSinhronizaer.Root">
+            <summary>
+            <value>root search root property</value>
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ExportSinhronizaer.Files">
+            <summary>
+            <value>files-property</value>
+            </summary>
+        </member>
+        <member name="T:SinchronizerV2.ImportSinchronizaer">
+            <summary>
+            import export class
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.ImportSinchronizaer.files">
+            <summary>
+            list files
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.ImportSinchronizaer.dir">
+            <summary>
+            list dirs
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.ImportSinchronizaer.Open(SinchronizerV2.Sinhronizer)">
+            <summary>
+            method of starting recursive traversal
+            </summary>
+            <param name="s">root of the bypass folder</param>
+            <param name="obj">serialization object</param>
+        </member>
+        <member name="M:SinchronizerV2.ImportSinchronizaer.Reset">
+            <summary>
+            method of cleaning values
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ImportSinchronizaer.Complete">
+            <summary>
+            <value>property for checking is ended recursive bypass</value>
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ImportSinchronizaer.Dir">
+            <summary>
+            <value>folder-property</value>
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ImportSinchronizaer.Root">
+            <summary>
+            <value>root search root property</value>
+            </summary>
+        </member>
+        <member name="P:SinchronizerV2.ImportSinchronizaer.File">
+            <summary>
+            <value>files-property</value>
+            </summary>
+        </member>
+        <member name="T:SinchronizerV2.MySerialization">
+            <summary>
+            serialization class
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.MySerialization.Serialization(SinchronizerV2.Sinhronizer,System.String)">
+            <summary>
+            method Serialization
+            </summary>
+            <param name="obj">serialization object</param>
+            <param name="WaySaveFile">file save path</param>
+        </member>
+        <member name="M:SinchronizerV2.MySerialization.Deserialize(SinchronizerV2.Sinhronizer@)">
+            <summary>
+            method Deserialize
+            </summary>
+            <param name="sin">Deserialize object</param>
+        </member>
+        <member name="T:SinchronizerV2.Sinhronizer">
+            <summary>
+            generic synchronization class
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.Sinhronizer.export">
+            <summary>
+            class fields export
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.Sinhronizer.import">
+            <summary>
+            class fields import
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.Sinhronizer.WaySaveFile">
+            <summary>
+            filed way Serialize file first
+            </summary>
+        </member>
+        <member name="F:SinchronizerV2.Sinhronizer.WaSaveFile2">
+            <summary>
+            filed way Serialize file second
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.Sinhronizer.Create">
+            <summary>
+            method for create object and read Serialize
+            </summary>
+            <returns>object type Sinhronizer</returns>
+        </member>
+        <member name="M:SinchronizerV2.Sinhronizer.NewSinhronizer(SinchronizerV2.Sinhronizer)">
+            <summary>
+            method for entering new roots
+            </summary>
+            <param name="sin">object Sinhronizer</param>
+        </member>
+        <member name="M:SinchronizerV2.Sinhronizer.Reset">
+            <summary>
+            method for reset object
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.Sinhronizer.CreateDir">
+            <summary>
+            method for create folders
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.Sinhronizer.Comparisone">
+            <summary>
+            method of starting all processes
+            </summary>
+        </member>
+        <member name="M:SinchronizerV2.Sinhronizer.TestChoise">
+            <summary>
+            data input validation method
+            </summary>
+            <returns>choise</returns>
+        </member>
+    </members>
+</doc>
